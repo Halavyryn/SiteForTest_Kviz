@@ -1,0 +1,35 @@
+/*Main style file*/
+
+/*Connecting fonts*/
+@font-face {
+  font-weight: 500; /* Medium */
+  font-family: 'Raleway', sans-serif;
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2");
+  font-display: optional;
+}
+@font-face {
+  font-weight: 600; /* SemiBold*/
+  font-family: 'Raleway', sans-serif;
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2");
+  font-display: optional;
+}
+@font-face { /*Bold */
+  font-weight: 700;
+  font-family: 'Neue Machina', sans-serif;
+  src: url("../fonts/NeueMachina-Bold.woff2") format("woff2");
+  font-display: optional;
+}
+@font-face { /*UltraBold */
+  font-weight: 800;
+  font-family: 'Neue Machina', sans-serif;
+  src: url("../fonts/NeueMachina-Ultrabold.woff2") format("woff2");
+  font-display: optional;
+}
+
+/*Connecting fonts*/
+body{
+  height: 100vh;
+  display: grid;
+  justify-content: space-between;
+}
+

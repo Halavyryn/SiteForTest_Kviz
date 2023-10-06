@@ -53,7 +53,12 @@ const clean = require('gulp-clean');
 /*CSS*/
 /*Функция для получения файла min.css из scss*/
 function styles(){
-    return src('assets/scss/style.scss')
+    return src([
+        'assets/scss/reset.scss',
+        'assets/scss/style.scss',
+        'assets/scss/header.scss',
+        'assets/scss/footer.scss',
+    ])
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
         .pipe(concat('style.min.css'))
         .pipe(scss({ outputStyle: 'compressed' }))
@@ -81,7 +86,7 @@ function watching(){
             baseDir: "assets/"
         }
     });
-    watch(['assets/scss/style.scss'], styles)
+    watch(['assets/scss/**/*.scss'], styles)
     watch(['assets/images/src'], images)
     watch(['assets/js/main.js'], scripts)
     watch(['assets/components/*', 'assets/pages/*'], pages)
@@ -155,15 +160,9 @@ function sprite(){
 function fonts(){
     return src('assets/fonts/src/*.*')
 
-        /*Конвертирует все шрифты в 'woff', 'ttf'*/
-        .pipe(fonter({
-            formats: ['woff', 'ttf']
-        }))
-
-        /*Конвертирует только из форматом .ttf в .ttf2 .woff2*/
+        /*Конвертирует только из форматом .ttf в .woff2*/
         .pipe(src('assets/fonts/*.ttf'))
         .pipe(ttf2woff2())
-
         .pipe(dest('assets/fonts'))
 }
 

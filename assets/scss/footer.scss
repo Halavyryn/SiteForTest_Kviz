@@ -1,0 +1,98 @@
+.footer{
+  width: 100vw;
+  height: 253px;
+  border-radius: 32px 32px 0 0;
+  background: #000;
+}
+.footer__inner {
+  margin: 32px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__tel-name {
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.footer__tel-number {
+  margin-top: 16px;
+  color: #FFF;
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.footer__email-name {
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.footer__email-address {
+  margin-top: 16px;
+  color: #FFF;
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.footer__socialmedia {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 9px;
+}
+
+.footer__socialmedia-item {
+  width: 341.819px;
+  height: 71.582px;
+  cursor:pointer;
+}
+
+.footer__tik-tok {
+  border-radius: 999px;
+  background: url('../images/footer_tit-tok.png'), lightgray 50% / contain no-repeat;
+  mix-blend-mode: lighten;
+}
+.footer__vk {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: url('../images/footer_vk.png'), lightgray 50% / contain no-repeat;
+}
+.footer__telegram {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: url('../images/footer_telegram.png'), lightgray 50% / contain no-repeat;
+}
+
+.footer__logo {
+  grid-column: span 1;
+  grid-row: span 1;
+  justify-self: end;
+  align-self: end;
+  color: #FFF;
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

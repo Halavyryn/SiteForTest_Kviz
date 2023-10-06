@@ -1,0 +1,157 @@
+header {
+  width: 100vw;
+  height: 535px;
+  border-radius: 0 0 32px 32px;
+  background: #FFF;
+  background: url('../images/Group 5.png'), lightgray 50% / contain no-repeat;
+}
+
+.header__top {
+  width: 100vw;
+  height: 64px;
+  border-radius: 0 0 32px 32px;
+  border-bottom: 1px solid #F2F2F2;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(70px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__logo {
+  color: #000;
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.header__menu-item {
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.header__feedback {
+  display: flex;
+  gap: 48px;
+}
+
+.header__feedback-button{
+  display: inline-flex;
+  height: 45px;
+  padding: 12px 32px 10px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 16px;
+  background: #000;
+
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.header__socialmedia {
+  display: flex;
+  gap: 8px;
+}
+
+.header__socialmedia-item{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+}
+
+/*Connecting fonts*/
+.header__tik-tok {
+  background: url('../images/header_tik-tok.png'), lightgray 50% / contain no-repeat;
+}
+.header__vk {
+  background: url('../images/header_vk.png'), lightgray 50% / contain no-repeat;
+}
+.header__telegram {
+  background: url('../images/header_telegram.png'), lightgray 50% / contain no-repeat;
+}
+
+
+.header__titles {
+  margin-top: 124px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__titles-title {
+  color: #000;
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header__title-text {
+  width: 690px;
+  color: #000;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.header__title-button {
+  display: flex;
+  padding: 12px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 16px;
+  background: #000;
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.header__smiles {
+}
+
+
+
+
+
+
+.header__socialmedia-item{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+}
+
+/*Connecting fonts*/
+.header__tik-tok {
+  background: url('../images/header_tik-tok.png'), lightgray 50% / contain no-repeat;
+}
+.header__vk {
+  background: url('../images/header_vk.png'), lightgray 50% / contain no-repeat;
+}
+.header__telegram {
+  background: url('../images/header_telegram.png'), lightgray 50% / contain no-repeat;
+}

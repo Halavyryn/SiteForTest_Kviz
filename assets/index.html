@@ -9,39 +9,88 @@
     <link rel="stylesheet" href="../css/style.min.css">
 </head>
 <body>
-<header>
-    header
+<header class="header">
+    <div class="header__top">
+        <!--logo-->
+        <div class="header__logo">
+            Super Quiz
+        </div>
+        <!--menu-->
+        <ul class="header__menu" id="navbar">
+                <li class="header__menu-item" ><a href="#">Главная</a></li>
+                <li class="header__menu-item" ><a href="#">Квиз</a></li>
+                <li class="header__menu-item" ><a href="#">Отзывы</a></li>
+                <li class="header__menu-item"><a href="#">Не главная</a></li>
+        </ul>
+        <!-- feedback-->
+        <div class="header__feedback" >
+           <!-- feedback button-->
+            <div class="header__feedback-button" >
+                Связаться с нами
+            </div>
+            <!--social media-->
+            <div class="header__socialmedia" >
+                <div class="header__socialmedia-item header__tik-tok" onclick= "alert('Кнопка нажата')">
+                </div>
+
+                <div class="header__socialmedia-item header__vk" onclick= "alert('Кнопка нажата')">
+                </div>
+
+                <div class="header__socialmedia-item header__telegram" onclick= "alert('Кнопка нажата')" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__titles">
+        <div class="header__titles-title">Это Супер-квиз!</div>
+        <div class="header__title-text">
+            Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!
+        </div>
+        <div class="header__title-button">Пройти супер-квиз</div>
+    </div>
+    <div class="header__smiles"></div>
 </header>
 <main>
     main
 </main>
 <footer class="footer" xmlns="http://www.w3.org/1999/html">
     <div class="footer__inner">
-        
-        <!--Phone & Email-->
-        <div class="footer__contacts">
-            <!--phone-->
-            <div class="footer__tel">
-                <p class="footer__tel-name">Телефон</p>
-                <p class="footer__tel-number">
-                    <a href="tel:+375123456789">+375 12 345 67 89</a>
-                </p>
+
+        <div class="footer__information">
+            <!--Contacts-->
+            <div class="footer__contacts">
+                <!--phone-->
+                <div class="footer__tel">
+                    <p class="footer__tel-name">Телефон</p>
+                    <p class="footer__tel-number">
+                        <a href="tel:+375123456789">+375 12 345 67 89</a>
+                    </p>
+                </div>
+                <!--email-->
+                <div class="footer__email">
+                    <p class="footer__email-name">Email</p>
+                    <p class="footer__email-address">
+                        <a href="ourmail@gmail.com">ourmail@gmail.com</a>
+                    </p>
+                </div>
             </div>
-            <!--email-->
-            <div class="footer__email">
-                <p class="footer__email-name">Email</p>
-                <p class="footer__email-address">
-                    <a href="ourmail@gmail.com">ourmail@gmail.com</a>
-                </p>
+            <!--Social media-->
+            <div class="footer__socialmedia">
+                <div class="footer__socialmedia-item footer__tik-tok" onclick= "alert('Кнопка нажата')">
+                </div>
+
+                <div class="footer__socialmedia-item footer__vk" onclick= "alert('Кнопка нажата')">
+                </div>
+
+                <div class="footer__socialmedia-item footer__telegram" onclick= "alert('Кнопка нажата')" >
+                </div>
             </div>
         </div>
 
-        <!--Social media-->
-        <div class="footer"
-
-
-
-
+        <!--footer logo-->
+        <div class="footer__logo">
+            Super Quiz
+        </div>
     </div>
 </footer>
 <script src="../js/main.min.js"></script>
