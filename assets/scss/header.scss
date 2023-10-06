@@ -2,8 +2,9 @@ header {
   width: 100vw;
   height: 535px;
   border-radius: 0 0 32px 32px;
-  background: #FFF;
-  background: url('../images/Group 5.png'), lightgray 50% / contain no-repeat;
+  background: url('../images/Group5.png') no-repeat 0 173px,
+  url('../images/Group6.png') no-repeat 100% 173px,
+  #FFF;
 }
 
 .header__top {
@@ -34,6 +35,10 @@ header {
 }
 
 .header__menu-item {
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -41,6 +46,34 @@ header {
   font-weight: 500;
   line-height: normal;
 }
+
+.header__menu-item:after {
+  content: " ";
+  display: none;
+  position: absolute;
+
+  width: 76px;
+  height: 4px;
+
+  border-radius: 32px 32px 0px 0px;
+  background: #000;
+
+  transition: 0.15s ease;
+  top: 28px;
+}
+
+.header__menu-item:hover:after {
+  display: block;
+}
+
+.header__menu-item:active {
+  color: #985e5b;
+}
+
+
+
+
+
 
 .header__feedback {
   display: flex;
@@ -131,7 +164,30 @@ header {
   line-height: normal;
 }
 
-.header__smiles {
+.smiles__menu{
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.smiles__menu-item{
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 9999px;
+  background: #FFF;
+}
+
+.smiles__menu-item-text{
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 
@@ -139,19 +195,3 @@ header {
 
 
 
-.header__socialmedia-item{
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-}
-
-/*Connecting fonts*/
-.header__tik-tok {
-  background: url('../images/header_tik-tok.png'), lightgray 50% / contain no-repeat;
-}
-.header__vk {
-  background: url('../images/header_vk.png'), lightgray 50% / contain no-repeat;
-}
-.header__telegram {
-  background: url('../images/header_telegram.png'), lightgray 50% / contain no-repeat;
-}
