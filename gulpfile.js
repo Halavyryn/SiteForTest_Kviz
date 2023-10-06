@@ -53,11 +53,11 @@ const clean = require('gulp-clean');
 /*CSS*/
 /*Функция для получения файла min.css из scss*/
 function styles(){
-    return src('app/scss/style.scss')
+    return src('assets/scss/style.scss')
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
         .pipe(concat('style.min.css'))
         .pipe(scss({ outputStyle: 'compressed' }))
-        .pipe(dest('app/css'))
+        .pipe(dest('assets/css'))
         .pipe(browserSync.stream())
 }
 
@@ -65,11 +65,11 @@ function styles(){
 /*Функция для получения файла min.js из js*/
 function scripts(){
     return src([
-        'app/js/main.js'
+        'assets/js/main.js'
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(dest('app/js'))
+        .pipe(dest('assets/js'))
         .pipe(browserSync.stream())
 }
 
@@ -78,14 +78,14 @@ function scripts(){
 function watching(){
     browserSync.init({
         server: {
-            baseDir: "app/"
+            baseDir: "assets/"
         }
     });
-    watch(['app/scss/style.scss'], styles)
-    watch(['app/images/src'], images)
-    watch(['app/js/main.js'], scripts)
-    watch(['app/components/*', 'app/pages/*'], pages)
-    watch(['app/*.html']).on('change', browserSync.reload)
+    watch(['assets/scss/style.scss'], styles)
+    watch(['assets/images/src'], images)
+    watch(['assets/js/main.js'], scripts)
+    watch(['assets/components/*', 'assets/pages/*'], pages)
+    watch(['assets/*.html']).on('change', browserSync.reload)
 }
 
 /*Функция для удаления старой версии проекта build*/
@@ -97,15 +97,15 @@ function cleanDist(){
 /*Функция для построения проекта*/
 function building(){
     return src([
-        'app/css/style.min.css',
-        '!app/images/**/*.html',
-        'app/images/*.*',
-        '!app/images/*.svg',
-        'app/images/sprite.svg',
-        'app/fonts/*.*',
-        'app/js/main.min.js',
-        'app/**/*.html'
-    ], { base : 'app'})
+        'assets/css/style.min.css',
+        '!assets/images/**/*.html',
+        'assets/images/*.*',
+        '!assets/images/*.svg',
+        'assets/images/sprite.svg',
+        'assets/fonts/*.*',
+        'assets/js/main.min.js',
+        'assets/**/*.html'
+    ], { base : 'assets'})
         .pipe(dest('dist'))
 }
 
@@ -114,31 +114,31 @@ function building(){
 
 /*Функция для конвертации картинок*/
 function images(){
-    return src(['app/images/src/*.*','!app/images/src/*.svg'])
+    return src(['assets/images/src/*.*','!assets/images/src/*.svg'])
 
         /*Плагин кеш для проверки существуют ли картинки, чтобы не повторять конвертацию*/
-        .pipe(newer('app/images'))
+        .pipe(newer('assets/images'))
         /*Из исходного формата в avif кроме svg*/
         .pipe(avif({ quality : 50 }))
 
         /*Из исходного формата в webp кроме svg,avif*/
-        .pipe(src('app/images/src/*.*'))
-        .pipe(newer('app/images'))
+        .pipe(src('assets/images/src/*.*'))
+        .pipe(newer('assets/images'))
         .pipe(webp())
 
         /*Из исходного формата в сжатый .jpg кроме svg, avif, webp*/
-        .pipe(src('app/images/src/*.*'))
-        .pipe(newer('app/images'))
+        .pipe(src('assets/images/src/*.*'))
+        .pipe(newer('assets/images'))
         .pipe(imagemin())
 
         /*Помещает получ. файлы в указ. директорию*/
-        .pipe(dest('app/images'))
+        .pipe(dest('assets/images'))
 }
 
 /*SVG*/
 /*Функция для создания спрайта*/
 function sprite(){
-    return src('app/images/*.svg')
+    return src('assets/images/*.svg')
         .pipe(svgSprite({
             mode: {
                 stack: {
@@ -147,13 +147,13 @@ function sprite(){
                 }
             }
         }))
-        .pipe(dest('app/images'))
+        .pipe(dest('assets/images'))
 }
 
 /*FONTS*/
 /*Функция для конвертации шрифтов*/
 function fonts(){
-    return src('app/fonts/src/*.*')
+    return src('assets/fonts/src/*.*')
 
         /*Конвертирует все шрифты в 'woff', 'ttf'*/
         .pipe(fonter({
@@ -161,20 +161,20 @@ function fonts(){
         }))
 
         /*Конвертирует только из форматом .ttf в .ttf2 .woff2*/
-        .pipe(src('app/fonts/*.ttf'))
+        .pipe(src('assets/fonts/*.ttf'))
         .pipe(ttf2woff2())
 
-        .pipe(dest('app/fonts'))
+        .pipe(dest('assets/fonts'))
 }
 
 /*GULP INCLUDE*/
 /*Функция для объедтнеия html-файлов*/
 function pages(){
-    return src('app/pages/*.html')
+    return src('assets/pages/*.html')
         .pipe(include({
-            includePaths: 'app/components'
+            includePaths: 'assets/components'
         }))
-        .pipe(dest('app'))
+        .pipe(dest('assets'))
         .pipe(browserSync.stream())
 }
 
