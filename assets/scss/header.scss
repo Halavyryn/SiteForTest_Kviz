@@ -36,9 +36,7 @@ header {
 
 .header__menu-item {
   position: relative;
-  user-select: none;
   cursor: pointer;
-
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -51,29 +49,17 @@ header {
   content: " ";
   display: none;
   position: absolute;
-
   width: 76px;
   height: 4px;
-
   border-radius: 32px 32px 0px 0px;
   background: #000;
-
   transition: 0.15s ease;
   top: 28px;
 }
 
-.header__menu-item:hover:after {
+.header__menu-item.active:after {
   display: block;
 }
-
-.header__menu-item:active {
-  color: #985e5b;
-}
-
-
-
-
-
 
 .header__feedback {
   display: flex;
