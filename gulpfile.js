@@ -57,6 +57,8 @@ function styles(){
         'assets/scss/reset.scss',
         'assets/scss/style.scss',
         'assets/scss/header.scss',
+        'assets/scss/section_kviz.scss',
+        'assets/scss/section_cards.scss',
         'assets/scss/footer.scss',
     ])
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))

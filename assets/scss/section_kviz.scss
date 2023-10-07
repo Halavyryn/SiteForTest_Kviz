@@ -1,0 +1,111 @@
+.kviz {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 96px;
+}
+
+.container {
+
+}
+
+.kviz__inner {
+  width: 1112px;
+  height: 634px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: #FFF;
+}
+
+.kviz__box{
+  margin: 48px 32px 32px 32px;
+}
+
+.kviz__title {
+  width: 1048px;
+  color: #000;
+  font-family: 'Neue Machina', sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.kviz__text {
+  margin-top: 24px;
+  width: 700px;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.kviz__menu {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kviz__menu-item {
+  display: flex;
+  padding: 8px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  border: 2px solid #000;
+
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.selected{
+  display: flex;
+  padding: 8px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  background: #000;
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+li.selected::before{
+  content: '';
+  background-color: #fff;
+  background-image: url("../images/close_icon.svg");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+}
+
+
+.kviz__btn {
+  margin-top: 64px;
+  display: flex;
+  padding: 12px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 16px;
+  background: #000;
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

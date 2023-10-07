@@ -26,13 +26,19 @@
   font-display: optional;
 }
 
-/*Connecting fonts*/
+/*main styles*/
 body{
   border-radius: 16px;
   background: #F9EFFF;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: grid;
   justify-content: space-between;
+}
+
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 

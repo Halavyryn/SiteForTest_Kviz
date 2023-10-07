@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', () => {
     links('.header__menu-item')
 })
 
-
 const links = selector => {
     const linksItems = document.querySelectorAll(selector)
 
@@ -12,5 +11,4 @@ const links = selector => {
             item.classList.add('active')
         })
     })
-
 }
