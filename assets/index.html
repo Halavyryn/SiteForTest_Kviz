@@ -17,11 +17,11 @@
         </div>
         <!--menu-->
         <ul class="header__menu" id="navbar">
-                <li class="header__menu-item active" ><a href="#main">Главная</a></li>
+                <li class="header__menu-item active" ><a href="/">Главная</a></li>
                 <li class="header__menu-item" ><a href="#kviz">Квиз</a></li>
-                <li class="header__menu-item" ><a href="#feedback">Отзывы</a></li>
+                <li class="header__menu-item" ><a href="#cards">Отзывы</a></li>
                 <li class="header__menu-item dropdown">
-                    <a href="#about">Не главная</a>
+                    <a href="#">Не главная</a>
                         <div class="dropdown-content">
                             <a class="dropdown-content-item" href="#">Подпункт</a>
                             <a class="dropdown-content-item" href="#">Ещё подпункт</a>
@@ -32,7 +32,7 @@
         <!-- feedback-->
         <div class="header__feedback" >
            <!-- feedback button-->
-            <div class="header__feedback-button" >
+            <div class="header__feedback-button button" >
                 Связаться с нами
             </div>
             <!--social media-->
@@ -49,11 +49,13 @@
         </div>
     </div>
     <div class="header__titles">
-        <h1 class="header__titles-title">Это Супер&#8211;квиз!</h1>
+        <h1 class="header__titles-title">Это Супер-квиз!</h1>
         <p class="header__title-text">
             Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!
         </p>
-        <div class="header__title-button">Пройти супер-квиз</div>
+        <div class="header__title-button button">
+            <a href="#kviz">Пройти супер-квиз</a>
+        </div>
     </div>
 
 </header>
@@ -83,7 +85,7 @@
 </section>
 <main>
     <!--Section kviz-->
-    <section class="kviz">
+    <section class="kviz" id="kviz">
         <div class="container">
             <div class="kviz__inner">
                 <div class="kviz__box">
@@ -103,7 +105,7 @@
                         <li class="kviz__menu-item">На логическое мышление</li>
                         <li class="kviz__menu-item">На уровень интеллекта</li>
                     </ul>
-                    <button class="kviz__btn">Продолжить</button>
+                    <button class="kviz__btn button">Продолжить</button>
                 </div>
             </div>
 
@@ -111,7 +113,7 @@
     </section>
 
     <!--Section cards-->
-    <section class="cards">
+    <section class="cards" id="cards">
         <div class="container">
             <div class="cards__menu">
                <!--Card 1-->

@@ -1,7 +1,7 @@
 .kviz {
   display: flex;
   justify-content: center;
-  margin-bottom: 96px;
+  margin-bottom: 60px;
 }
 
 .container {
@@ -27,7 +27,7 @@
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1em;
 }
 
 .kviz__text {
@@ -45,7 +45,7 @@
   margin-top: 64px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
 }
 
 .kviz__menu-item {
