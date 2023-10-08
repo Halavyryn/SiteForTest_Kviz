@@ -1,12 +1,3 @@
-.cards {
-
-}
-
-/*.cards__menu {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-}*/
 
 .cards__menu-item {
   margin-right: 10px;
@@ -21,7 +12,6 @@
   flex: 1 0 0;
   align-self: stretch;
   border-radius: 32px;
-
 }
 .cards__menu-item1{
   background: center / cover no-repeat  url('../images/users_bg/user_bg1.png');
@@ -86,12 +76,12 @@
   align-self: stretch;
 }
 
-//delete dots
+/*delete dots*/
 .flickity-page-dots{
   display: none;
 }
 
-//delete default svg
+/*delete default svg*/
 .flickity-button-icon{
   display: none;
 }

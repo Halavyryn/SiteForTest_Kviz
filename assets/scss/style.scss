@@ -30,12 +30,16 @@
 body{
   background: #F9EFFF;
   overflow-x: hidden;
+ /* width: 100%;
+  height: 100%;*/
+  display: grid;
+  justify-content: space-around;
 }
 
 .container{
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 15px;
+/*  padding: 0 15px;*/
 }
 .button:hover{
   transition: 0.15s ease;

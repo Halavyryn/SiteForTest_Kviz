@@ -12,7 +12,8 @@
 
 .footer__contacts {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 48px;
 }
 
 .footer__tel-name {
@@ -25,7 +26,7 @@
 }
 
 .footer__tel-number {
-  margin-top: 16px;
+  margin-top: 5px;
   color: #FFF;
   font-family: 'Neue Machina', sans-serif;
   font-size: 48px;
@@ -45,7 +46,7 @@
 }
 
 .footer__email-address {
-  margin-top: 16px;
+  margin-top: 5px;
   color: #FFF;
   font-family: 'Neue Machina', sans-serif;
   font-size: 48px;
