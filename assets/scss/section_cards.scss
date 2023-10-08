@@ -2,13 +2,14 @@
 
 }
 
-.cards__menu {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-}
+/*.cards__menu {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}*/
 
 .cards__menu-item {
+  margin-right: 10px;
   width: 352px;
   height: 464px;
   display: flex;
@@ -34,7 +35,6 @@
 .cards__menu-item4{
   background: center / cover no-repeat  url('../images/users_bg/user_bg4.png');
 }
-
 
 .users {
   position: relative;
@@ -84,4 +84,54 @@
   font-weight: 500;
   line-height: normal;
   align-self: stretch;
+}
+
+//delete dots
+.flickity-page-dots{
+  display: none;
+}
+
+//delete default svg
+.flickity-button-icon{
+  display: none;
+}
+
+.flickity-prev-next-button.next{
+  width: 170px;
+  height: 170px;
+  background: center / contain no-repeat url("../images/next.svg") !important;
+}
+
+.flickity-prev-next-button.previous{
+  width: 170px;
+  height: 170px;
+  background: center / contain no-repeat url("../images/previous.svg") !important;
+}
+
+.gallery {
+  margin: 100px 0;
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 352px;
+  height: 464px;
+  margin-right: 10px;
+  counter-increment: carousel-cell+3;
+}
+@media screen and ( min-width: 768px ) {
+  .carousel-cell {
+    aspect-ratio: 3/ 4;
+  }
+}
+
+@media screen and ( min-width: 960px ) {
+  .carousel-cell {
+    aspect-ratio: 3/4;
+  }
+}
+@media screen and ( min-width: 1120px ) {
+  .carousel-cell {
+    aspect-ratio: 3/4;
+  }
 }

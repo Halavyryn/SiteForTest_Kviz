@@ -1,19 +1,74 @@
 .kviz {
-  display: flex;
-  justify-content: center;
+  margin-top: 96px;
   margin-bottom: 60px;
 }
-
-.container {
-
+.kviz__outer{
+  display: flex;
+  gap: 8px;
 }
 
+.kviz__popup {
+  align-self: flex-start;
+  display: flex;
+  padding: 10px 48px 10px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 0px 8px 8px 0px;
+  background: #000;
+}
+
+.kviz__popup-question {
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: stretch;
+}
+
+.kviz__popup-answer {
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  align-self: stretch;
+}
+
+.kviz__shadow1{
+  top: -290px;
+  left: 310px;
+  position: absolute;
+  width: 498px;
+  height: 1064px;
+  transform: rotate(-90deg);
+  border-radius: 32px;
+  background: #E9C4FF;
+  z-index: -1;
+}
+.kviz__shadow2{
+  top: -268px;
+  left: 310px;
+  position: absolute;
+  width: 506px;
+  height: 1008px;
+  transform: rotate(-90deg);
+  border-radius: 32px;
+  background: #F0D9FF;
+  z-index: -2;
+}
 .kviz__inner {
+  position: relative;
   width: 1112px;
   height: 634px;
   flex-shrink: 0;
   border-radius: 32px;
   background: #FFF;
+/*  box-shadow: 48px -16px #F0D9FF,
+  24px -8px #E9C4FF,*/
 }
 
 .kviz__box{
@@ -55,7 +110,6 @@
   gap: 10px;
   border-radius: 20px;
   border: 2px solid #000;
-
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
@@ -92,7 +146,6 @@ li.selected::before{
   height: 22px;
   width: 22px;
 }
-
 
 .kviz__btn {
   margin-top: 64px;

@@ -28,12 +28,8 @@
 
 /*main styles*/
 body{
-  border-radius: 16px;
   background: #F9EFFF;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .container{
