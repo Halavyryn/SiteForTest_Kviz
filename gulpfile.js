@@ -60,6 +60,9 @@ function styles(){
         'assets/scss/section_kviz.scss',
         'assets/scss/section_cards.scss',
         'assets/scss/footer.scss',
+
+
+        'assets/libs/itc/itc-custom-select.css',
     ])
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
         .pipe(concat('style.min.css'))
@@ -72,7 +75,12 @@ function styles(){
 /*Функция для получения файла min.js из js*/
 function scripts(){
     return src([
-        'assets/js/main.js'
+        'assets/js/main.js',
+        'assets/js/header.js',
+        'assets/js/section_kviz.js',
+        'assets/js/main.js',
+
+        'assets/libs/itc/itc-custom-select.js',
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())

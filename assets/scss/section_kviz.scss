@@ -1,27 +1,66 @@
-.kviz {
+
+.button:hover{
+  transition: 0.15s ease;
+  background: #9E00FF;
+  cursor: pointer;
+}
+
+ul{
+  list-style-type: none;
+}
+
+input[type="checkbox" ]{
+  display: none;
+}
+.kviz{
+
+}
+#kviz .container {
   margin-top: 90px;
   margin-bottom: 60px;
+  position: relative;
+  width: 1504px;
+  height: 762px;
+ /* background: #ffff99;*/
 }
-.kviz__outer{
+.kviz__inner{
   display: flex;
   gap: 8px;
 }
 
-.kviz__popup {
+
+.kviz__popups{
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  border-radius: 0px 8px 8px 0px;
+}
+
+div.no_select{
+  background: #FFF;
+  color: #000;
+}
+
+.kviz__popup, .kviz__popup2, .kviz__popup3{
   align-self: flex-start;
   display: flex;
-  width: 100%;
-  height: auto;
+  width: 320px;
+  min-height: 38px;
   padding: 10px 48px 10px 24px;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  border-radius: 20px;
   background: #000;
+  color:#FFF;
+  border-radius: 0px 8px 0px 0px;
 }
 
-.kviz__popup-question {
-  color: #FFF;
+
+.kviz__popup-question,.kviz__popup2-question,.kviz__popup3-question {
+  margin: 0;
+  color: inherit;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -30,8 +69,9 @@
   align-self: stretch;
 }
 
-.kviz__popup-answer {
-  color: #FFF;
+.kviz__popup-answer, .kviz__popup2-answer, .kviz__popup3-answer {
+  margin: 0;
+  color: inherit;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -39,6 +79,15 @@
   line-height: normal;
   align-self: stretch;
 }
+
+.no_select .kviz__popup-answer{
+  background: #FFF;
+  color: #000;
+}
+.no_select .kviz__popup2-answer{
+  color: initial;
+}
+
 
 .kviz__shadow1{
   top: -290px;
@@ -51,6 +100,7 @@
   background: #E9C4FF;
   z-index: -1;
 }
+
 .kviz__shadow2{
   top: -267px;
   left: 310px;
@@ -62,18 +112,27 @@
   background: #F0D9FF;
   z-index: -2;
 }
-.kviz__inner {
+.kviz__content {
   position: relative;
   width: 1112px;
-  height: 634px;
+  height: auto;
   border-radius: 32px;
   background: #FFF;
-/*  box-shadow: 48px -16px #F0D9FF,
-  24px -8px #E9C4FF,*/
 }
+
 
 .kviz__box{
   margin: 48px 32px 32px 32px;
+}
+
+.kviz__image-smiles{
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  aspect-ratio: 2 / 1;
 }
 
 .kviz__title {
@@ -104,7 +163,8 @@
   gap: 4px;
 }
 
-.kviz__menu-item {
+.kviz__menu-item{
+  cursor: pointer;
   display: flex;
   padding: 8px 32px;
   align-items: flex-start;
@@ -118,39 +178,14 @@
   font-weight: 500;
   line-height: normal;
 }
-
-.selected{
-  display: flex;
-  padding: 8px 32px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-radius: 20px;
-  border: 2px solid #000;
-  background: #000;
-  color: #FFF;
-  font-family: 'Raleway', sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
-li.selected::before{
-  content: '';
-  background-color: #fff;
-  background-image: url("../images/close_icon.svg");
-  background-size: 12px 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-  height: 22px;
-  width: 22px;
+label{
+  display: block;
+  box-sizing: inherit;
 }
 
 .kviz__btn {
+  display: inline-block;
   margin-top: 64px;
-  display: flex;
   padding: 12px 32px;
   align-items: flex-start;
   gap: 10px;
@@ -162,4 +197,257 @@ li.selected::before{
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+.previos-btn{
+  color: #000000;
+  border: 2px solid #000;
+  background: #FFF;
+}
+
+
+.checkbox-btn {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  user-select: none;
+  position: relative;
+}
+.checkbox-btn input[type=checkbox] {
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-btn span {
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 8px 32px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 2px solid #000;
+}
+.checkbox-btn span:hover{
+  background: #9E00FF;
+}
+/* Checked */
+.checkbox-btn input[type=checkbox]:checked + span {
+  border: 2px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.checkbox-btn input[type=checkbox]:checked + span:before{
+  content: '';
+  background-color: #fff;
+  background-image: url("../images/close_icon.svg");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+}
+.checkbox-btn input[type=checkbox]:checked + span:hover:before{
+  content: '';
+  background: #9E00FF;
+  background-image: url("../images/close_icon_hover.svg");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+}
+
+/* Active */
+.checkbox-btn input[type=checkbox]:active:not(:disabled) + span {
+  background: #000;
+  color: #fff;
+}
+
+
+/*FOR MODAL WINDOW*/
+.btn{
+  padding: 10px 60px;
+  background: #FFFFFF;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+.popup, .popup2, .popup3, .popup4{
+  width: 1504px;
+  height: 762px;
+  border-radius: 6px;
+  position: absolute;
+  margin: 0 auto;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: left;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup, .open-popup2, .open-popup3{
+  visibility: visible;
+ /* top: 430px;
+  left: 722px;*/
+  top: 375px;
+  left: 720px;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 100;
+}
+.close-popup, .close-popup2, .close-popup3, .close-popup4{
+  /* visibility: visible; */
+  display: none;
+}
+
+/*page withradiobox*/
+.form_radio_btn {
+  display: inline-block;
+  margin-right: 10px;
+}
+.form_radio_btn input[type=radio] {
+  display: none;
+}
+.form_radio_btn label {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  padding: 8px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  border: 2px solid #000;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form_radio_btn label:before{
+  content: '';
+  background-color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000;
+}
+
+
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+  border-radius: 20px;
+  border: 2px solid #000;
+  background: #000;
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.form_radio_btn input[type=radio]:checked + label:before{
+  content: '';
+  background-color: #fff;
+  background-image: url("../images/dot.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 24px;
+  width: 24px;
+}
+
+/* Hover */
+.form_radio_btn label:hover {
+  background: #9E00FF;
+}
+.form_radio_btn input[type=radio]:checked:hover + label:before{
+  background-image: url("../images/dot_hover.svg");
+}
+
+/*MODALWINDOW3*/
+ul.kviz__menu {
+  padding: 0;
+}
+/*INPUT*/
+input[type="text"] {
+  font-family: inherit; /* 1 */
+  font-size: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/* установим отступ 1rem от нижнего края элемента */
+.text-field {
+  margin-bottom: 1rem;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+/* стили для label */
+.text-field__label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+/* стили для input */
+.text-field__input {
+
+  height: calc(2.25rem + 2px);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  display: flex;
+  width: 700px;
+  padding: 8px 0px;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 2px solid #000;
+}
+
+.text-field__input::placeholder {
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.3;
+}
+
+.text-field__input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+  border-bottom: 2px solid #000;
+  outline: 0;
+}
+
+.page{
+  color: initial;
+  background: white;
 }
