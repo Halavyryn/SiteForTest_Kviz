@@ -1,56 +1,21 @@
 <!--=include header.html -->
 <main>
-    <!--Section kviz-->
-    <!--<section class="kviz" id="kviz">
-        <div class="container">
-            <div class="kviz__outer">
-                <div class="kviz__popup">
-                    <h3 class="kviz__popup-question">Какие виды тестов вам нравятся?</h3>
-                    <p class="kviz__popup-answer">Кто я из вселенной Марвел, На словарный запас</p>
-                </div>
-                <div class="kviz__inner">
-                        <div class="kviz__box">
-                            <h2 class="kviz__title">Какие виды тестов вам нравятся?</h2>
-                            <p class="kviz__text">
-                                Многие из нас хоть раз попадались на эту
-                                удочку — хочешь пройти всего один тест из интернета, и
-                                вдруг понимаешь, что пролетело полдня.
-                            </p>
-                            <ul class="kviz__menu">
-                                <li class="kviz__menu-item ">На темперамент</li>
-                                <li class="kviz__menu-item selected">Кто я из вселенной Марвел</li>
-                                <li class="kviz__menu-item">Увидел это</li>
-                                <li class="kviz__menu-item">Мое тотемное животное</li>
-                                <li class="kviz__menu-item">На IQ</li>
-                                <li class="kviz__menu-item selected">На словарный запас</li>
-                                <li class="kviz__menu-item">На логическое мышление</li>
-                                <li class="kviz__menu-item">На уровень интеллекта</li>
-                            </ul>
-                            <button class="kviz__btn button">Продолжить</button>
-                        </div>
-                        <div class="kviz__shadow1">
-                        </div>
-                        <div class="kviz__shadow2">
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>-->
 
-    <!--SECTION PAGE-->
+    <!--SECTION KVIZ-->
     <!--page 1 | checkbox -->
-    <section class="kviz" id="kviz">
+  <!--  <section class="kviz" id="kviz">
         <div class="container">
-            <!-- page1 | checkbox-->
+
+            &lt;!&ndash; page1 | checkbox&ndash;&gt;
             <div class="popup open-popup" id="popup">
                 <div class="kviz_outer">
                     <div class="kviz__inner">
-                        <!-- <div class="kviz__popups">-->
+                        &lt;!&ndash; <div class="kviz__popups">&ndash;&gt;
                         <div class="kviz__popup">
                             <h3 class="kviz__popup-question">Какие виды тестов вам нравятся?</h3>
                             <p class="kviz__popup-answer" id="answer"> </p>
                         </div>
-                        <!-- </div>-->
+                        &lt;!&ndash; </div>&ndash;&gt;
                         <div class="kviz__content">
                             <div class="kviz__box">
                                 <h2 class="kviz__title">Какие виды тестов вам нравятся?</h2>
@@ -111,7 +76,7 @@
                 </div>
             </div>
 
-            <!--page 2 | radio -->
+            &lt;!&ndash;page 2 | radio &ndash;&gt;
             <div class="popup2" id="popup2">
                 <div class="kviz__inner">
                     <div class="kviz__popups">
@@ -166,7 +131,7 @@
                 </div>
             </div>
 
-            <!--page 3 | text field -->
+            &lt;!&ndash;page 3 | text field &ndash;&gt;
             <div class="popup3" id="popup3">
                 <div class="kviz__inner">
                     <div class="kviz__popups">
@@ -197,11 +162,11 @@
                                 <div class="text-field">
                                     <input class="text-field__input" type="text" name="login" id="login" placeholder="Ваше мнение сюда" value="">
                                 </div>
-                                <!--Dropdawn -->
+                                &lt;!&ndash;Dropdawn &ndash;&gt;
                                 <div class="itc-select" id="select-1">
-                                    <!-- Кнопка для открытия выпадающего списка -->
+                                    &lt;!&ndash; Кнопка для открытия выпадающего списка &ndash;&gt;
                                     <button type="button"  class="itc-select__toggle"  id="dropdown_btn" name="effect" value="Очень понравился" data-select="toggle" data-index="0">Очень понравился</button>
-                                    <!-- Выпадающий список -->
+                                    &lt;!&ndash; Выпадающий список &ndash;&gt;
                                     <div class="itc-select__dropdown" >
                                         <ul class="itc-select__options" id="itc-select__dropdown" >
                                             <li class="itc-select__option itc-select__option_selected" data-select="option" data-value="Очень понравился" data-index="0">Очень понравился</li>
@@ -226,133 +191,15 @@
             </div>
 
         </div>
-    </section>
-
-<!--
-
-    &lt;!&ndash;page 2 | radio &ndash;&gt;
-    <div class="popup2" id="popup2">
-        <div class="kviz__inner">
-            <div class="kviz__popups">
-                <div class="kviz__popup no_select">
-                    <h3 class="kviz__popup-question">Какие виды тестов вам нравятся?</h3>
-                    <p class="kviz__popup-answer"></p>
-                </div>
-                <div class="kviz__popup2">
-                    <h3 class="kviz__popup2-question">Вы любите проходить тесты?</h3>
-                    <p class="kviz__popup2-answer"> </p>
-                </div>
-            </div>
-            <div class="kviz__content">
-                <div class="kviz__box">
-                    <h2 class="kviz__title">Вы любите проходить тесты?</h2>
-                    <p class="kviz__text">
-                        Нам важно узнать насолько часто Вы проходите тесты.
-                    </p>
-                    <div class="kviz__menu">
-                        <div class="form_radio_btn">
-                            <input id="radio-1" type="radio" name="radio" value="Нет, я не никогда не прохожу тесты" >
-                            <label for="radio-1">Нет, я не никогда не прохожу тесты</label>
-                        </div>
-
-                        <div class="form_radio_btn">
-                            <input id="radio-2" type="radio" name="radio" value="Да, я прохожу все тесты">
-                            <label for="radio-2">Да, я прохожу все тесты</label>
-                        </div>
-
-                        <div class="form_radio_btn">
-                            <input id="radio-3" type="radio" name="radio" value="Заставляю себя проходить тесты">
-                            <label for="radio-3">Заставляю себя проходить тесты</label>
-                        </div>
-
-                        <div class="form_radio_btn">
-                            <input id="radio-4" type="radio" name="radio" value="Не люблю проходить тесты, но иногда приходится">
-                            <label for="radio-4">Не люблю проходить тесты, но иногда приходится</label>
-                        </div>
-                    </div>
-
-                    <div class="buttons"></div>
-                    <button class="kviz__btn button previos-btn" onclick="closePopup_previos2()">Назад</button>
-                    <button class="kviz__btn button" onclick="closePopup2()">Продолжить</button>
-
-
-                </div>
-                <div class="kviz__shadow1">
-                </div>
-                <div class="kviz__shadow2">
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    &lt;!&ndash;page 3 | text field &ndash;&gt;
-    <div class="popup3" id="popup3">
-        <div class="kviz__inner">
-            <div class="kviz__popups">
-
-                <div class="kviz__popup no_select">
-                    <h3 class="kviz__popup-question">Какие виды тестов вам нравятся?</h3>
-                    <p class="kviz__popup-answer"></p>
-                </div>
-
-                <div class="kviz__popup2 no_select">
-                    <h3 class="kviz__popup2-question">Вы любите проходить тесты?</h3>
-                    <p class="kviz__popup2-answer"></p>
-                </div>
-
-                <div class="kviz__popup3">
-                    <h3 class="kviz__popup3-question">Спасибо за ответы! Заполните форму ниже</h3>
-                </div>
-
-            </div>
-            <div class="kviz__content">
-                <div class="kviz__box">
-                    <img class="kviz__image-smiles" src="../images/kviz__img-smile.png" alt="Смайлы">
-                    <h2 class="kviz__title">Спасибо за ответы! Заполните форму ниже</h2>
-                    <p class="kviz__text">
-                        Ваше мнение важно для нас. Прикрепите фото с Вашей любимой картинкой и оставьте комментарий насколько понравился Вам тест.
-                    </p>
-                    <div class="kviz__menu">
-                        <div class="text-field">
-                            <input class="text-field__input" type="text" name="login" id="login" placeholder="Ваше мнение сюда" value="">
-                        </div>
-                        &lt;!&ndash;Dropdawn &ndash;&gt;
-                        <div class="itc-select" id="select-1">
-                            &lt;!&ndash; Кнопка для открытия выпадающего списка &ndash;&gt;
-                            <button type="button"  class="itc-select__toggle"  id="dropdown_btn" name="effect" value="Очень понравился" data-select="toggle" data-index="0">Очень понравился</button>
-                            &lt;!&ndash; Выпадающий список &ndash;&gt;
-                            <div class="itc-select__dropdown" >
-                                <ul class="itc-select__options" id="itc-select__dropdown" >
-                                    <li class="itc-select__option itc-select__option_selected" data-select="option" data-value="Очень понравился" data-index="0">Очень понравился</li>
-                                    <li class="itc-select__option" data-select="option" data-value="Не понравился" data-index="1">Не понравился</li>
-                                    <li class="itc-select__option" data-select="option" data-value="Пройду еще раз" data-index="2">Пройду еще раз</li>
-                                    <li class="itc-select__option" data-select="option" data-value="Посоветую пройти всем" data-index="3">Посоветую пройти всем</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="buttons"></div>
-                    <button class="kviz__btn button previos-btn" onclick="closePopup_previos3()">Назад</button>
-                    <button class="kviz__btn button" onclick="closePopup3()">Продолжить</button>
-
-                </div>
-                <div class="kviz__shadow1">
-                </div>
-                <div class="kviz__shadow2">
-                </div>
-            </div>
-        </div>
-    </div>
--->
+    </section>-->
 
     <!--Section cards-->
-    <section class="cards" id="cards">
+   <!-- <section class="cards" id="cards">
         <div class="container">
-            <!-- Flickity HTML init -->
+            &lt;!&ndash; Flickity HTML init &ndash;&gt;
             <div class="gallery js-flickity"
                  data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
-                <!--Card 1-->
+                &lt;!&ndash;Card 1&ndash;&gt;
                 <div class=" cards__menu-item cards__menu-item1 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -365,7 +212,7 @@
                     </div>
                 </div>
 
-                <!--Card 2-->
+                &lt;!&ndash;Card 2&ndash;&gt;
                 <div class=" cards__menu-item cards__menu-item2 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -379,7 +226,7 @@
                     </div>
                 </div>
 
-                <!--Card 3-->
+                &lt;!&ndash;Card 3&ndash;&gt;
                 <div class="cards__menu-item  cards__menu-item3 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -393,7 +240,7 @@
                     </div>
                 </div>
 
-                <!--Card 4-->
+                &lt;!&ndash;Card 4&ndash;&gt;
                 <div class="cards__menu-item cards__menu-item4 carousel-cell  ">
                     <div class="users">
                         <div class="users-photo">
@@ -407,7 +254,7 @@
                     </div>
                 </div>
 
-                <!--Card 5-->
+                &lt;!&ndash;Card 5&ndash;&gt;
                 <div class=" cards__menu-item cards__menu-item2 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -422,6 +269,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 </main>
 <!--=include footer.html -->

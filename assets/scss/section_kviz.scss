@@ -17,7 +17,7 @@ input[type="checkbox" ]{
 }
 #kviz .container {
   margin-top: 90px;
-  margin-bottom: 60px;
+  margin-bottom: 0x;
   position: relative;
   width: 1504px;
   height: 762px;
@@ -157,7 +157,7 @@ div.no_select{
 }
 
 .kviz__menu {
-  margin-top: 64px;
+  margin-top: 55px;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -287,7 +287,8 @@ label{
 }
 .popup, .popup2, .popup3, .popup4{
   width: 1504px;
-  height: 762px;
+/*  height: 762px;*/
+  height: auto;
   border-radius: 6px;
   position: absolute;
   margin: 0 auto;
@@ -302,7 +303,7 @@ label{
   visibility: visible;
  /* top: 430px;
   left: 722px;*/
-  top: 375px;
+  top: 345px;
   left: 720px;
   transform: translate(-50%, -50%) scale(1);
   z-index: 100;
@@ -450,4 +451,8 @@ input[type="text"] {
 .page{
   color: initial;
   background: white;
+}
+div.gallery{
+  margin-top: 0;
+  margin-bottom: 100px;
 }

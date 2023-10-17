@@ -1,0 +1,39 @@
+form {
+  max-width: 450px;
+
+  // позиционируем
+  > div {
+    position: relative;
+    // Похоже на плейсхолдер
+    > label {
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+  }
+
+> div {
+  > input[type=”text”]{
+    &:focus {
+      & + label {
+        opacity: 0;
+      }
+    }
+  }
+}
+  >input[type=”text”]{
+
+    // покажите успех!
+    &:valid {
+      background: url(images/check.svg);
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 20px 20px;
+      // продолжаем прятать label
+      & + label {
+        opacity: 0;
+      }
+    }
+  }
+}

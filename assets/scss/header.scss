@@ -3,8 +3,35 @@ header {
   height: 535px;
   border-radius: 0 0 32px 32px;
   background: url('../images/Group5.png') no-repeat 0 173px,
-  url('../images/Group6.png') no-repeat 100% 173px,
-  #FFF;
+  url('../images/Group6.png') no-repeat 100% 173px, #FFF;
+  position: relative;
+}
+
+.feedback__popup{
+ /* position: absolute;*/
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(169, 234, 78, 0.8);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+ /* top: 0;*/
+ /* left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);*/
+
+
+ /* width: 676px;*/
+  height: 909px;
+  flex-shrink: 0;
+  border-radius: 32px;
+ /* background: #ee2727;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback__popup-content{
+
 }
 
 .header__top {

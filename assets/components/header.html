@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.min.css">
     <!--FOR DROPDOWN-->
-    <!--<link rel="stylesheet" href="../assets/libs/itc/itc-custom-select.css">-->
+    <link rel="stylesheet" href="../libs/itc/itc-custom-select.css">
 
     <!--Add flicky-->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
@@ -56,6 +56,82 @@
             </div>
         </div>
     </div>
+
+    <div class="feedback__popup">
+        <div class="feedback__popup-content">
+
+            <div class="form-titles">
+                <h3 class="form-title">Заполните контактные данные</h3>
+                <p class="form-subtitle">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+            </div>
+
+            <form class="form-fields" method="post" id="ajax_form" action="#0">
+                <div class="form-field">
+                    <input type="text" id="first_name" name="first_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
+                    <label for="first_name">Ваше имя</label>
+
+                    <!--<div class="requirements">
+                        The field can contain uppercase and lowercase letters, up to 15 characters.
+                    </div>-->
+                </div>
+
+                <div class="form-field">
+                    <input type="text" id="last_name" name="last_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
+                    <label for="last_name">Ваша фамилия</label>
+                   <!-- <div class="requirements">
+                        The field can contain uppercase and lowercase letters, up to 15 characters.
+                    </div>-->
+                </div>
+
+                <div class="form-field">
+                    <label for="last_name">Ваш комментарий</label>
+                    <input type="text" id="last_name" name="last_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
+                  <!--  <div class="requirements">
+                        The field can contain uppercase and lowercase letters, up to 15 characters.
+                    </div>-->
+                </div>
+
+                <p class="form-subtitle">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+
+                <div class="form-buttons" >
+
+                    <div class="form_radio_btn">
+                        <input id="radio-1" type="radio" name="radio" value="Не знаю " >
+                        <label for="radio-1">Не знаю </label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-2" type="radio" name="radio" value="Увидел это">
+                        <label for="radio-2">Увидел это</label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-3" type="radio" name="radio" value="Вон то">
+                        <label for="radio-3">Вон то</label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-4" type="radio" name="radio" value="Вон то">
+                        <label for="radio-4">Вон то</label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-3" type="radio" name="radio" value="Увидел это">
+                        <label for="radio-3">Увидел это</label>
+                    </div>
+
+                    <div class="form_radio_btn">
+                        <input id="radio-4" type="radio" name="radio" value="Не знаю ">
+                        <label for="radio-4">Не знаю</label>
+                    </div>
+                </div>
+
+                <button class="form-button" onclick="PopUpHide()">Продолжить</button>
+            </form>
+
+        </div>
+    </div>
+
     <div class="header__titles">
         <h1 class="header__titles-title">Это Супер-квиз!</h1>
         <p class="header__title-text">

@@ -31,7 +31,7 @@
   margin-left: 1rem;
   background-size: cover;
   content: "";
-  background-image:  url("../images/select_arrow.svg");
+  background-image:  url("../../images/select_arrow.svg");
   width: 20px;
   height: 10px;
 }
@@ -51,7 +51,7 @@
   left: 0;
   z-index: 2;
   display: none;
-  max-height: 10rem;
+  max-height: 12rem;
   overflow: hidden;
   background-color: #fff;
   width: 300px;
@@ -99,7 +99,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e1f5fe;
+  background: #F9EFFF;
 }
 
 .itc-select__option:hover {

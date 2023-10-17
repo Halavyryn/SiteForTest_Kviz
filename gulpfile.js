@@ -60,9 +60,7 @@ function styles(){
         'assets/scss/section_kviz.scss',
         'assets/scss/section_cards.scss',
         'assets/scss/footer.scss',
-
-
-        'assets/libs/itc/itc-custom-select.css',
+        'assets/scss/feedback.scss',
     ])
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
         .pipe(concat('style.min.css'))
@@ -79,8 +77,6 @@ function scripts(){
         'assets/js/header.js',
         'assets/js/section_kviz.js',
         'assets/js/main.js',
-
-        'assets/libs/itc/itc-custom-select.js',
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
