@@ -20,14 +20,14 @@
 <body>
 <div class="feedback__popup" id="feedback__popup">
     <div class="feedback__popup-content">
-        <div class="feedback__cross" onclick="CloseFeedbackPopup()">
+        <div class="feedback__cross" onclick="CloseFeedbackPopupForCross()">
         </div>
         <div class="form-titles">
             <h3 class="form-title">Заполните контактные данные</h3>
             <p class="form-subtitle">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
         </div>
 
-        <form class="form-fields" method="post" action="#"  enctype="multipart/form-data">
+        <form class="form-fields" enctype="multipart/form-data">
             <div class="form-field">
                 <input type="text" id="first_name" name="first_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
                 <label for="first_name">Ваше имя</label>
@@ -97,7 +97,7 @@
                 </div>
             </div>
 
-            <button class="button form-button" onclick="CloseFeedbackPopup()">Продолжить</button>
+            <button class="button form-button" onclick="CloseFeedbackPopupForButton()">Продолжить</button>
         </form>
 
     </div>
@@ -109,7 +109,7 @@
         <img class="feedback__end-img" src="../images/feedback_end_image.png" alt="Smile">
         <h3 class="feedback__end-title">Ваши данные Отправлены</h3>
         <p class="feedback__end-text">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
-        <button class="feedback__end-button">Вернутся на сайт</button>
+        <button class="feedback__end-button button" onclick="CloseFeedbackEndPopup()">Вернутся на сайт</button>
     </div>
 
 </div>
