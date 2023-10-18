@@ -1,39 +1,99 @@
 form {
-  max-width: 450px;
+  max-width: 612px;
+  margin: 0 auto;
 
-  // позиционируем
+  // positioning context
   > div {
     position: relative;
-    // Похоже на плейсхолдер
+    background: white;
+
+    // Looks like placeholder
     > label {
       opacity: 0.3;
       position: absolute;
+      top: 22px;
+      left: 0;
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    > label[for=comment] {
       top: 0;
-      left: 10px;
     }
+
+    > input[type="text"], > label[for=comment] {
+      width: 100%;
+      border: 0;
+      padding: 20px 20px 0 0;
+      background: #fff;
+
+
+      color: #000;
+      font-family: 'Raleway', sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      &:focus {
+        outline: 0;
+        background: white;
+
+        & + label {
+          opacity: 0;
+        }
+      }
+
+      &:valid {
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 20px 20px;
+        & + label {
+          opacity: 0;
+        }
+      }
+
+      &:invalid:not(:focus):not(:placeholder-shown) {
+        background: pink;
+        & + label {
+          opacity: 0;
+        }
+      }
+
+      &:invalid:focus:not(:placeholder-shown) {
+        & ~ .requirements {
+          max-height: 200px;
+          padding: 0 30px 20px 50px;
+        }
+      }
+
+    }
+
+   /* .requirements {
+      padding: 50px 30px 0 50px;
+      color: #999;
+      max-height: 0;
+      transition: 0.28s;
+      overflow: hidden;
+      color: red;
+      font-style: italic;
+    }*/
+
   }
 
-> div {
-  > input[type=”text”]{
-    &:focus {
-      & + label {
-        opacity: 0;
-      }
-    }
-  }
-}
-  >input[type=”text”]{
-
-    // покажите успех!
-    &:valid {
-      background: url(images/check.svg);
-      background-size: 20px;
-      background-repeat: no-repeat;
-      background-position: 20px 20px;
-      // продолжаем прятать label
-      & + label {
-        opacity: 0;
-      }
-    }
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background: #41D873;
+    color: white;
+    border: 0;
+    padding: 20px;
+    font-size: 1.2rem;
   }
 }

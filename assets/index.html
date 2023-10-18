@@ -11,12 +11,108 @@
     <link rel="stylesheet" href="../libs/itc/itc-custom-select.css">
 
     <!--Add flicky-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 
 </head>
 <body>
+<div class="feedback__popup" id="feedback__popup">
+    <div class="feedback__popup-content">
+        <div class="feedback__cross" onclick="CloseFeedbackPopup()">
+        </div>
+        <div class="form-titles">
+            <h3 class="form-title">Заполните контактные данные</h3>
+            <p class="form-subtitle">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+        </div>
+
+        <form class="form-fields" method="post" action="#"  enctype="multipart/form-data">
+            <div class="form-field">
+                <input type="text" id="first_name" name="first_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
+                <label for="first_name">Ваше имя</label>
+                <!--<div class="requirements">
+                    The field can contain uppercase and lowercase letters, up to 15 characters.
+                </div>-->
+            </div>
+
+            <div class="form-field">
+                <input type="text" id="last_name" name="last_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
+                <label for="last_name">Фамилия</label>
+                <!--     <div class="requirements">
+                         The field can contain uppercase and lowercase letters, up to 15 characters.
+                     </div>-->
+            </div>
+
+            <div class="form-field-comment">
+                <input type="text" id="comment" name="comment" required placeholder=" " pattern="[A-Za-z]{1,15}">
+                <label for="comment">Ваш комментарий</label>
+                <!--  <div class="requirements">
+                      The field can contain uppercase and lowercase letters, up to 15 characters.
+                  </div>-->
+            </div>
+
+            <div class="input__wrapper">
+                <input name="file" type="file" id="input__file" class="input input__file" multiple>
+                <label for="input__file" class="input__file-button">
+                    <span class="input__file-button-text">Приложить файлы</span>
+                    <img class="input__file-icon" src="../images/input_files_img.svg" alt="Выбрать файл" width="25">
+                </label>
+            </div>
+
+            <p class="form-field-text">Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+
+            <div class="form-buttons" >
+
+                <div class="form-buttons-btn">
+                    <input id="btn-radio-1" type="radio" name="radio" value="Не знаю" >
+                    <label for="btn-radio-1">Не знаю</label>
+                </div>
+
+                <div class="form-buttons-btn">
+                    <input id="btn-radio-2" type="radio" name="radio" value="Увидел это">
+                    <label for="btn-radio-2">Увидел это</label>
+                </div>
+
+                <div class="form-buttons-btn">
+                    <input id="btn-radio-3" type="radio" name="radio" value="Вон то">
+                    <label for="btn-radio-3">Вон то</label>
+                </div>
+
+
+
+                <div class="form-buttons-btn">
+                    <input id="btn-radio-4" type="radio" name="radio" value="Вон то">
+                    <label for="btn-radio-4">Вон то</label>
+                </div>
+
+                <div class="form-buttons-btn">
+                    <input id="btn-radio-5" type="radio" name="radio" value="Увидел это">
+                    <label for="btn-radio-5">Увидел это</label>
+                </div>
+
+                <div class="form-buttons-btn">
+                    <input id="btn-radio-6" type="radio" name="radio" value="Не знаю">
+                    <label for="btn-radio-6">Не знаю</label>
+                </div>
+            </div>
+
+            <button class="button form-button" onclick="CloseFeedbackPopup()">Продолжить</button>
+        </form>
+
+    </div>
+</div>
+<div class="feedback__end" id="feedback__end">
+    <div class="feedback__end-content">
+        <div class="feedback__end-cross" onclick="CloseFeedbackEndPopup()"></div>
+
+        <img class="feedback__end-img" src="../images/feedback_end_image.png" alt="Smile">
+        <h3 class="feedback__end-title">Ваши данные Отправлены</h3>
+        <p class="feedback__end-text">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
+        <button class="feedback__end-button">Вернутся на сайт</button>
+    </div>
+
+</div>
 <header class="header" id="main">
     <div class="header__top">
         <!--logo-->
@@ -40,7 +136,7 @@
         <!-- feedback-->
         <div class="header__feedback" >
            <!-- feedback button-->
-            <div class="header__feedback-button button" >
+            <div class="header__feedback-button button" onclick="OpenFeedbackPopup()" >
                 Связаться с нами
             </div>
             <!--social media-->
@@ -57,80 +153,7 @@
         </div>
     </div>
 
-    <div class="feedback__popup">
-        <div class="feedback__popup-content">
 
-            <div class="form-titles">
-                <h3 class="form-title">Заполните контактные данные</h3>
-                <p class="form-subtitle">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
-            </div>
-
-            <form class="form-fields" method="post" id="ajax_form" action="#0">
-                <div class="form-field">
-                    <input type="text" id="first_name" name="first_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
-                    <label for="first_name">Ваше имя</label>
-
-                    <!--<div class="requirements">
-                        The field can contain uppercase and lowercase letters, up to 15 characters.
-                    </div>-->
-                </div>
-
-                <div class="form-field">
-                    <input type="text" id="last_name" name="last_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
-                    <label for="last_name">Ваша фамилия</label>
-                   <!-- <div class="requirements">
-                        The field can contain uppercase and lowercase letters, up to 15 characters.
-                    </div>-->
-                </div>
-
-                <div class="form-field">
-                    <label for="last_name">Ваш комментарий</label>
-                    <input type="text" id="last_name" name="last_name" required placeholder=" " pattern="[A-Za-z]{1,15}">
-                  <!--  <div class="requirements">
-                        The field can contain uppercase and lowercase letters, up to 15 characters.
-                    </div>-->
-                </div>
-
-                <p class="form-subtitle">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят проходить тесты!</p>
-
-                <div class="form-buttons" >
-
-                    <div class="form_radio_btn">
-                        <input id="radio-1" type="radio" name="radio" value="Не знаю " >
-                        <label for="radio-1">Не знаю </label>
-                    </div>
-
-                    <div class="form_radio_btn">
-                        <input id="radio-2" type="radio" name="radio" value="Увидел это">
-                        <label for="radio-2">Увидел это</label>
-                    </div>
-
-                    <div class="form_radio_btn">
-                        <input id="radio-3" type="radio" name="radio" value="Вон то">
-                        <label for="radio-3">Вон то</label>
-                    </div>
-
-                    <div class="form_radio_btn">
-                        <input id="radio-4" type="radio" name="radio" value="Вон то">
-                        <label for="radio-4">Вон то</label>
-                    </div>
-
-                    <div class="form_radio_btn">
-                        <input id="radio-3" type="radio" name="radio" value="Увидел это">
-                        <label for="radio-3">Увидел это</label>
-                    </div>
-
-                    <div class="form_radio_btn">
-                        <input id="radio-4" type="radio" name="radio" value="Не знаю ">
-                        <label for="radio-4">Не знаю</label>
-                    </div>
-                </div>
-
-                <button class="form-button" onclick="PopUpHide()">Продолжить</button>
-            </form>
-
-        </div>
-    </div>
 
     <div class="header__titles">
         <h1 class="header__titles-title">Это Супер-квиз!</h1>
@@ -169,21 +192,20 @@
 </section>
 <main>
 
-    <!--SECTION KVIZ-->
-    <!--page 1 | checkbox -->
-  <!--  <section class="kviz" id="kviz">
+   <!-- SECTION KVIZ
+    page 1 | checkbox -->
+    <section class="kviz" id="kviz">
         <div class="container">
-
-            &lt;!&ndash; page1 | checkbox&ndash;&gt;
+            <!-- page1 | checkbox-->
             <div class="popup open-popup" id="popup">
                 <div class="kviz_outer">
                     <div class="kviz__inner">
-                        &lt;!&ndash; <div class="kviz__popups">&ndash;&gt;
+                        <!-- <div class="kviz__popups">-->
                         <div class="kviz__popup">
                             <h3 class="kviz__popup-question">Какие виды тестов вам нравятся?</h3>
                             <p class="kviz__popup-answer" id="answer"> </p>
                         </div>
-                        &lt;!&ndash; </div>&ndash;&gt;
+                        <!-- </div>-->
                         <div class="kviz__content">
                             <div class="kviz__box">
                                 <h2 class="kviz__title">Какие виды тестов вам нравятся?</h2>
@@ -244,7 +266,7 @@
                 </div>
             </div>
 
-            &lt;!&ndash;page 2 | radio &ndash;&gt;
+            <!--page 2 | radio -->
             <div class="popup2" id="popup2">
                 <div class="kviz__inner">
                     <div class="kviz__popups">
@@ -299,7 +321,7 @@
                 </div>
             </div>
 
-            &lt;!&ndash;page 3 | text field &ndash;&gt;
+            <!--page 3 | text field -->
             <div class="popup3" id="popup3">
                 <div class="kviz__inner">
                     <div class="kviz__popups">
@@ -330,11 +352,11 @@
                                 <div class="text-field">
                                     <input class="text-field__input" type="text" name="login" id="login" placeholder="Ваше мнение сюда" value="">
                                 </div>
-                                &lt;!&ndash;Dropdawn &ndash;&gt;
+                                <!--Dropdawn -->
                                 <div class="itc-select" id="select-1">
-                                    &lt;!&ndash; Кнопка для открытия выпадающего списка &ndash;&gt;
+                                    <!-- Кнопка для открытия выпадающего списка -->
                                     <button type="button"  class="itc-select__toggle"  id="dropdown_btn" name="effect" value="Очень понравился" data-select="toggle" data-index="0">Очень понравился</button>
-                                    &lt;!&ndash; Выпадающий список &ndash;&gt;
+                                    <!-- Выпадающий список -->
                                     <div class="itc-select__dropdown" >
                                         <ul class="itc-select__options" id="itc-select__dropdown" >
                                             <li class="itc-select__option itc-select__option_selected" data-select="option" data-value="Очень понравился" data-index="0">Очень понравился</li>
@@ -357,17 +379,16 @@
                     </div>
                 </div>
             </div>
-
         </div>
-    </section>-->
+    </section>
 
     <!--Section cards-->
-   <!-- <section class="cards" id="cards">
+    <section class="cards" id="cards">
         <div class="container">
-            &lt;!&ndash; Flickity HTML init &ndash;&gt;
+            <!-- Flickity HTML init -->
             <div class="gallery js-flickity"
                  data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
-                &lt;!&ndash;Card 1&ndash;&gt;
+                <!--Card 1-->
                 <div class=" cards__menu-item cards__menu-item1 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -380,7 +401,7 @@
                     </div>
                 </div>
 
-                &lt;!&ndash;Card 2&ndash;&gt;
+                <!--Card 2-->
                 <div class=" cards__menu-item cards__menu-item2 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -394,7 +415,7 @@
                     </div>
                 </div>
 
-                &lt;!&ndash;Card 3&ndash;&gt;
+                <!--Card 3-->
                 <div class="cards__menu-item  cards__menu-item3 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -408,7 +429,7 @@
                     </div>
                 </div>
 
-                &lt;!&ndash;Card 4&ndash;&gt;
+                <!--Card 4-->
                 <div class="cards__menu-item cards__menu-item4 carousel-cell  ">
                     <div class="users">
                         <div class="users-photo">
@@ -422,7 +443,7 @@
                     </div>
                 </div>
 
-                &lt;!&ndash;Card 5&ndash;&gt;
+                <!--Card 5-->
                 <div class=" cards__menu-item cards__menu-item2 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -437,22 +458,22 @@
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 </main>
-<!--<footer class="footer" xmlns="http://www.w3.org/1999/html">
+<footer class="footer" xmlns="http://www.w3.org/1999/html">
     <div class="footer__inner">
 
         <div class="footer__information">
-            &lt;!&ndash;Contacts&ndash;&gt;
+            <!--Contacts-->
             <div class="footer__contacts">
-                &lt;!&ndash;phone&ndash;&gt;
+                <!--phone-->
                 <div class="footer__tel">
                     <p class="footer__tel-name">Телефон</p>
                     <p class="footer__tel-number">
                         <a href="tel:+375123456789">+375 12 345 67 89</a>
                     </p>
                 </div>
-                &lt;!&ndash;email&ndash;&gt;
+                <!--email-->
                 <div class="footer__email">
                     <p class="footer__email-name">Email</p>
                     <p class="footer__email-address">
@@ -460,7 +481,7 @@
                     </p>
                 </div>
             </div>
-            &lt;!&ndash;Social media&ndash;&gt;
+            <!--Social media-->
             <div class="footer__socialmedia">
                 <div class="footer__socialmedia-item footer__tik-tok" onclick= "alert('Кнопка нажата')">
                 </div>
@@ -473,12 +494,12 @@
             </div>
         </div>
 
-        &lt;!&ndash;footer logo&ndash;&gt;
+        <!--footer logo-->
         <div class="footer__logo">
             Super Quiz
         </div>
     </div>
-</footer>-->
+</footer>
 
 <!-- JS FOR DROPDOWN -->
 <script src="../libs/itc/itc-custom-select.js"></script>
