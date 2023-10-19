@@ -62,7 +62,7 @@ function styles(){
         'assets/scss/footer.scss',
         'assets/scss/feedback.scss',
 
-        'assets/scss/adaptive_header.scss',
+        'assets/scss/adaptive_header_popups.scss',
        /* 'assets/scss/adaptive_section_kviz.scss',
         'assets/scss/adaptive_section_cards.scss',
         'assets/scss/adaptive_footer.scss',*/
