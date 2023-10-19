@@ -57,17 +57,18 @@ function styles(){
         'assets/scss/reset.scss',
         'assets/scss/style.scss',
         'assets/scss/header.scss',
+        'assets/scss/header_popups.scss',
         'assets/scss/section_kviz.scss',
         'assets/scss/section_cards.scss',
         'assets/scss/footer.scss',
         'assets/scss/feedback.scss',
 
+        'assets/scss/adaptive_header.scss',
         'assets/scss/adaptive_header_popups.scss',
         'assets/scss/header_hamburger_menu.scss',
         'assets/scss/adaptive_section_cards.scss',
-       /* 'assets/scss/adaptive_section_kviz.scss',*/
-
-       /* 'assets/scss/adaptive_footer.scss',*/
+        'assets/scss/adaptive_section_kviz.scss',
+        'assets/scss/adaptive_footer.scss',
     ])
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
         .pipe(concat('style.min.css'))

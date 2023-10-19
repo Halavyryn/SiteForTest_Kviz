@@ -1,0 +1,87 @@
+@media (max-width: 1400px){
+  .footer__tel-name, .footer__email-name {
+    font-size: 14px;
+  }
+  .footer__tel-number, .footer__email-address{
+    font-size: 24px;
+  }
+  .footer__socialmedia-item {
+    width: 94.663px;
+    height: 36px;
+  }
+
+
+
+
+  .footer__tik-tok {
+    border-radius: 999px;
+    border: 1px solid #000;
+    background: url('../images/adaptive_footer_tik-tok.png'), lightgray 50% / contain no-repeat;
+  }
+  .footer__vk {
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: url('../images/adaptive_footer_vk.png'), lightgray 50% / cover no-repeat;
+  }
+  .footer__telegram {
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: url('../images/adaptive_footer_telegram.png'), lightgray 50% / contain no-repeat;
+  }
+}
+
+@media (max-width: 1400px){
+  .footer__contacts{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__socialmedia{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 650px){
+  .footer__inner{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .footer__logo{
+    align-self: flex-start;
+    order: -1;
+  }
+  .footer__information{
+    order: 0;
+  }
+}
+
+@media (max-width: 450px){
+  .footer__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__logo{
+    align-self: center;
+  }
+}
+
+@media (max-width: 335px){
+  .footer__logo{
+    font-size: 24px;
+  }
+  .footer__socialmedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

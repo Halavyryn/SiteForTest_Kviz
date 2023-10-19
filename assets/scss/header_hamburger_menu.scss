@@ -16,6 +16,7 @@
   .hamburger{
     display: block;
     background: #fff;
+   justify-self: flex-start;
   }
   /*delaet X*/
   .hamburger-active .bar:nth-child(2){
@@ -94,13 +95,6 @@
     background-size: 8px 16px;
     background-repeat: no-repeat;
     background-position: center;
-  }
-
-  .header__titles-title{
-    font-size: 72px;
-  }
-  .header__title-text{
-    font-size: 16px;
   }
 }
 @media (max-width: 450px) {
