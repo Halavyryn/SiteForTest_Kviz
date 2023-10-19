@@ -1,0 +1,17 @@
+@media (max-width: 1100px){
+  .flickity-prev-next-button.next{
+    width: 85px;
+    height: 85px;
+    background: center / contain no-repeat url("../images/next.svg") !important;
+  }
+  .flickity-prev-next-button.previous{
+    width: 85px;
+    height: 85px;
+    background: center / contain no-repeat url("../images/previous.svg") !important;
+  }
+}
+@media (max-width: 560px){
+  .flickity-prev-next-button.next, .flickity-prev-next-button.previous{
+    visibility: hidden;
+  }
+}

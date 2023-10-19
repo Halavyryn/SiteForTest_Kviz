@@ -121,19 +121,26 @@
             Super Quiz
         </div>
         <!--menu-->
-        <ul class="header__menu" id="navbar">
-                <li class="header__menu-item active" ><a href="/">Главная</a></li>
-                <li class="header__menu-item" ><a href="#kviz">Квиз</a></li>
-                <li class="header__menu-item" ><a href="#cards">Отзывы</a></li>
+        <nav class="navbar-menu">
+            <ul class="header__menu" id="navbar">
+                <li class="header__menu-item active" ><a class="nav-link" href="/">Главная</a></li>
+                <li class="header__menu-item" ><a class="nav-link" href="#kviz">Квиз</a></li>
+                <li class="header__menu-item" ><a class="nav-link" href="#cards">Отзывы</a></li>
                 <li class="header__menu-item dropdown">
-                    <a href="#">Не главная</a>
-                        <div class="dropdown-content">
-                            <a class="dropdown-content-item" href="#">Подпункт</a>
-                            <a class="dropdown-content-item" href="#">Ещё подпункт</a>
-                            <a class="dropdown-content-item" href="#">И ещё один подпункт</a>
-                        </div>
+                    <a class="nav-link" href="#">Не главная</a>
+                    <div class="dropdown-content">
+                        <a class="dropdown-content-item" href="#">Подпункт</a>
+                        <a class="dropdown-content-item" href="#">Ещё подпункт</a>
+                        <a class="dropdown-content-item" href="#">И ещё один подпункт</a>
+                    </div>
                 </li>
-        </ul>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
         <!-- feedback-->
         <div class="header__feedback" >
            <!-- feedback button-->

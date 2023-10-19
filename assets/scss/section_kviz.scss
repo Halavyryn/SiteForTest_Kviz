@@ -19,8 +19,9 @@ input[type="checkbox" ]{
   margin-top: 90px;
   margin-bottom: 0x;
   position: relative;
-  width: 1504px;
-  height: 762px;
+  max-width: 1504px;
+  width: 100%;
+  min-height: 762px;
  /* background: #ffff99;*/
 }
 .kviz__inner{
@@ -46,7 +47,8 @@ div.no_select{
 .kviz__popup, .kviz__popup2, .kviz__popup3{
   align-self: flex-start;
   display: flex;
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
   min-height: 38px;
   padding: 10px 48px 10px 24px;
   flex-direction: column;
@@ -114,7 +116,8 @@ div.no_select{
 }
 .kviz__content {
   position: relative;
-  width: 1112px;
+  max-width: 1112px;
+  width: 100%;
   height: auto;
   border-radius: 32px;
   background: #FFF;
@@ -136,7 +139,8 @@ div.no_select{
 }
 
 .kviz__title {
-  width: 1048px;
+  max-width: 1048px;
+  width: 100%;
   color: #000;
   font-family: 'Neue Machina', sans-serif;
   font-size: 72px;
@@ -147,7 +151,8 @@ div.no_select{
 
 .kviz__text {
   margin-top: 24px;
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;

@@ -121,19 +121,26 @@
             Super Quiz
         </div>
         <!--menu-->
-        <ul class="header__menu" id="navbar">
-                <li class="header__menu-item active" ><a href="/">Главная</a></li>
-                <li class="header__menu-item" ><a href="#kviz">Квиз</a></li>
-                <li class="header__menu-item" ><a href="#cards">Отзывы</a></li>
+        <nav class="navbar-menu">
+            <ul class="header__menu" id="navbar">
+                <li class="header__menu-item active" ><a class="nav-link" href="/">Главная</a></li>
+                <li class="header__menu-item" ><a class="nav-link" href="#kviz">Квиз</a></li>
+                <li class="header__menu-item" ><a class="nav-link" href="#cards">Отзывы</a></li>
                 <li class="header__menu-item dropdown">
-                    <a href="#">Не главная</a>
-                        <div class="dropdown-content">
-                            <a class="dropdown-content-item" href="#">Подпункт</a>
-                            <a class="dropdown-content-item" href="#">Ещё подпункт</a>
-                            <a class="dropdown-content-item" href="#">И ещё один подпункт</a>
-                        </div>
+                    <a class="nav-link" href="#">Не главная</a>
+                    <div class="dropdown-content">
+                        <a class="dropdown-content-item" href="#">Подпункт</a>
+                        <a class="dropdown-content-item" href="#">Ещё подпункт</a>
+                        <a class="dropdown-content-item" href="#">И ещё один подпункт</a>
+                    </div>
                 </li>
-        </ul>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
         <!-- feedback-->
         <div class="header__feedback" >
            <!-- feedback button-->
@@ -191,6 +198,7 @@
         </li>
     </ul>
 </section>
+
 <main>
 
    <!-- SECTION KVIZ
@@ -383,13 +391,13 @@
         </div>
     </section>
 
-    <!--Section cards-->
-    <section class="cards" id="cards">
+    <!--SECTION CARDS-->
+    <!--<section class="cards" id="cards">
         <div class="container">
-            <!-- Flickity HTML init -->
+            &lt;!&ndash; Flickity HTML init &ndash;&gt;
             <div class="gallery js-flickity"
                  data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
-                <!--Card 1-->
+                &lt;!&ndash;Card 1&ndash;&gt;
                 <div class=" cards__menu-item cards__menu-item1 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -402,7 +410,7 @@
                     </div>
                 </div>
 
-                <!--Card 2-->
+                &lt;!&ndash;Card 2&ndash;&gt;
                 <div class=" cards__menu-item cards__menu-item2 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -416,7 +424,7 @@
                     </div>
                 </div>
 
-                <!--Card 3-->
+                &lt;!&ndash;Card 3&ndash;&gt;
                 <div class="cards__menu-item  cards__menu-item3 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -430,7 +438,7 @@
                     </div>
                 </div>
 
-                <!--Card 4-->
+                &lt;!&ndash;Card 4&ndash;&gt;
                 <div class="cards__menu-item cards__menu-item4 carousel-cell  ">
                     <div class="users">
                         <div class="users-photo">
@@ -444,7 +452,7 @@
                     </div>
                 </div>
 
-                <!--Card 5-->
+                &lt;!&ndash;Card 5&ndash;&gt;
                 <div class=" cards__menu-item cards__menu-item2 carousel-cell">
                     <div class="users">
                         <div class="users-photo">
@@ -459,22 +467,22 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 </main>
-<footer class="footer" xmlns="http://www.w3.org/1999/html">
+<!--<footer class="footer" xmlns="http://www.w3.org/1999/html">
     <div class="footer__inner">
 
         <div class="footer__information">
-            <!--Contacts-->
+            &lt;!&ndash;Contacts&ndash;&gt;
             <div class="footer__contacts">
-                <!--phone-->
+                &lt;!&ndash;phone&ndash;&gt;
                 <div class="footer__tel">
                     <p class="footer__tel-name">Телефон</p>
                     <p class="footer__tel-number">
                         <a href="tel:+375123456789">+375 12 345 67 89</a>
                     </p>
                 </div>
-                <!--email-->
+                &lt;!&ndash;email&ndash;&gt;
                 <div class="footer__email">
                     <p class="footer__email-name">Email</p>
                     <p class="footer__email-address">
@@ -482,7 +490,7 @@
                     </p>
                 </div>
             </div>
-            <!--Social media-->
+            &lt;!&ndash;Social media&ndash;&gt;
             <div class="footer__socialmedia">
                 <div class="footer__socialmedia-item footer__tik-tok" onclick= "alert('Кнопка нажата')">
                 </div>
@@ -495,12 +503,12 @@
             </div>
         </div>
 
-        <!--footer logo-->
+        &lt;!&ndash;footer logo&ndash;&gt;
         <div class="footer__logo">
             Super Quiz
         </div>
     </div>
-</footer>
+</footer>-->
 
 <!-- JS FOR DROPDOWN -->
 <script src="../libs/itc/itc-custom-select.js"></script>

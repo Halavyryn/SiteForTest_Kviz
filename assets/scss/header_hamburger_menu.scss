@@ -1,0 +1,131 @@
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+
+@media (max-width: 1160px) {
+  .hamburger{
+    display: block;
+    background: #fff;
+  }
+  /*delaet X*/
+  .hamburger-active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger-active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .header__menu{
+    margin-top: -7px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    position: fixed;
+    left: -150%;
+    top: 70px;
+    flex-direction: column;
+    gap: 0;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .header__menu-active{
+    left: 0;
+  }
+
+  ul.header__menu .header__menu-active{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background: #41d873;
+  }
+
+  .header__menu-item {
+    width: 320px;
+    height: 55px;
+    padding: 16px 0;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #fff;
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+  }
+
+  .header__menu-active {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    width: 320px;
+    height: auto;
+    background: #F9EFFF;
+  }
+
+  .header__menu-item:after{
+    content: none;
+  }
+
+  .nav-link:after{
+    content: " ";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 8px;
+    height: 16px;
+    background-color: #fff;
+    background-image: url("../images/hamburger_item_arrow.svg");
+    background-size: 8px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .header__titles-title{
+    font-size: 72px;
+  }
+  .header__title-text{
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) {
+
+  .header__menu-active {
+    max-width: 320px;
+    width: 100%;
+    min-height: 55px;
+  }
+  .header__menu-item {
+    width: 100%;
+  }
+}
+@media (max-width: 280px) {
+  .header__menu-item {
+    padding: 8px;
+  }
+  a.nav-link{
+    font-size: 14px;
+  }
+  .header__menu-item .active{
+    padding: 0;
+  }
+  .header__menu-item {
+    max-height: 55px;
+    height: 100%;
+  }
+}

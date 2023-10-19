@@ -63,9 +63,11 @@ function styles(){
         'assets/scss/feedback.scss',
 
         'assets/scss/adaptive_header_popups.scss',
-       /* 'assets/scss/adaptive_section_kviz.scss',
+        'assets/scss/header_hamburger_menu.scss',
         'assets/scss/adaptive_section_cards.scss',
-        'assets/scss/adaptive_footer.scss',*/
+       /* 'assets/scss/adaptive_section_kviz.scss',*/
+
+       /* 'assets/scss/adaptive_footer.scss',*/
     ])
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
         .pipe(concat('style.min.css'))
@@ -79,9 +81,10 @@ function styles(){
 function scripts(){
     return src([
         'assets/js/main.js',
+        'assets/js/hamburger_menu.js',
         'assets/js/header.js',
         'assets/js/section_kviz.js',
-        'assets/js/main.js',
+
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())

@@ -28,18 +28,17 @@
 
 /*main styles*/
 body{
+  margin: 0;
+  height: 100%;
+  width: 100%;
   background: #F9EFFF;
-  overflow-x: hidden;
-  max-width: 100%;
-  min-height: 100%;
-  display: grid;
-  justify-content: space-around;
+  overflow:scroll;
 }
 
 .container{
   max-width: 1440px;
   margin: 0 auto;
-/*  padding: 0 15px;*/
+  padding: 0 15px;
 }
 .button:hover{
   transition: 0.15s ease;
