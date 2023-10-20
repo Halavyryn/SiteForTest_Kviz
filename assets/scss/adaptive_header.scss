@@ -7,6 +7,9 @@
     width: 100%;
     font-size: 16px;
   }
+  .smiles__menu-item-text{
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 970px) {
@@ -17,6 +20,9 @@
     max-width: 290px;
     width: 100%;
     font-size: 14px;
+  }
+  .smiles__menu-item-text{
+    font-size: 10px;
   }
 }
 
@@ -44,6 +50,10 @@
     width: 100%;
     font-size: 13px;
   }
+  .smiles__menu-item-img{
+    width: 16px;
+    height: 16px;
+  }
 }
 
 @media (max-width: 725px) {
@@ -55,7 +65,7 @@
     width: 100%;
     min-height: auto;
     border-radius: 0 0 32px 32px;
-    background: url(../images/adaptiv_bg_left.png) no-repeat 0% 203px,url(../images/adaptiv_bg_right.png) no-repeat 100% 143px,#fff;
+    background: url(../images/adaptiv_bg_left.avif) no-repeat 0% 203px,url(../images/adaptiv_bg_right.avif) no-repeat 100% 143px,#fff;
     position: relative;
   }
 
@@ -103,7 +113,7 @@
   }
 
   .header{
-    background: url(../images/adaptiv_bg_left.png) no-repeat 0% 312px,url(../images/adaptiv_bg_right.png) no-repeat 100% 255px,#fff;
+    background: url(../images/adaptiv_bg_left.avif) no-repeat 0% 312px,url(../images/adaptiv_bg_right.avif) no-repeat 100% 255px,#fff;
   }
 
   .hamburger{
@@ -111,8 +121,27 @@
     top: -15px;
     left: 0;
   }
+
+  .smiles__menu-item-text{
+    font-size: 8px;
+  }
 }
+
+@media (max-width: 540px) {
+  .smiles__menu-item-text{
+   display: none;
+  }
+  .smiles__menu-item-img{
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
 @media (max-width: 470px) {
+  .header__feedback{
+    display: none;
+  }
   .header__titles{
     display: flex;
     align-items: flex-start;
@@ -127,6 +156,11 @@
 @media (max-width: 357px) {
   .header__title-button{
     font-size: 14px;
+  }
+
+  .smiles__menu-item-img{
+    width: 16px;
+    height: 16px;
   }
 }
 

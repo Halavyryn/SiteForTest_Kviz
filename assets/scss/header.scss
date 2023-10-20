@@ -2,8 +2,8 @@ header {
   width: 100%;
   min-height: 535px;
   border-radius: 0 0 32px 32px;
-  background: url('../images/Group5.png') no-repeat 0 173px,
-  url('../images/Group6.png') no-repeat 100% 173px, #FFF;
+  background: url('../images/Group5.avif') no-repeat 0 173px,
+  url('../images/Group6.avif') no-repeat 100% 173px, #FFF;
   position: relative;
 }
 
@@ -113,13 +113,13 @@ header {
 
 /*Connecting fonts*/
 .header__tik-tok {
-  background: url('../images/header_tik-tok.png'), lightgray 50% / contain no-repeat;
+  background: url('../images/header_tik-tok.avif'), lightgray 50% / contain no-repeat;
 }
 .header__vk {
-  background: url('../images/header_vk.png'), lightgray 50% / contain no-repeat;
+  background: url('../images/header_vk.avif'), lightgray 50% / contain no-repeat;
 }
 .header__telegram {
-  background: url('../images/header_telegram.png'), lightgray 50% / contain no-repeat;
+  background: url('../images/header_telegram.avif'), lightgray 50% / contain no-repeat;
 }
 
 

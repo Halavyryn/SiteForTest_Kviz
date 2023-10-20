@@ -1,4 +1,6 @@
-
+.cards{
+  margin-top: 96px;
+}
 .cards__menu-item {
   margin-right: 10px;
   width: 352px;
@@ -14,16 +16,16 @@
   border-radius: 32px;
 }
 .cards__menu-item1{
-  background: center / cover no-repeat  url('../images/users_bg/user_bg1.png');
+  background: center / cover no-repeat  url('../images/users_bg/user_bg1.avif');
 }
 .cards__menu-item2{
-  background: center / cover no-repeat  url('../images/users_bg/user_bg2.png');
+  background: center / cover no-repeat  url('../images/users_bg/user_bg2.avif');
 }
 .cards__menu-item3{
-  background: center / cover no-repeat  url('../images/users_bg/user_bg3.png');
+  background: center / cover no-repeat  url('../images/users_bg/user_bg3.avif');
 }
 .cards__menu-item4{
-  background: center / cover no-repeat  url('../images/users_bg/user_bg4.png');
+  background: center / cover no-repeat  url('../images/users_bg/user_bg4.avif');
 }
 
 .users {
@@ -99,7 +101,7 @@
 }
 
 .gallery {
-  margin: 100px 0;
+  margin: 0;
   background: #EEE;
 }
 

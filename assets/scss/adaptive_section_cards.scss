@@ -10,6 +10,7 @@
     background: center / contain no-repeat url("../images/previous.svg") !important;
   }
 }
+
 @media (max-width: 560px){
   .flickity-prev-next-button.next, .flickity-prev-next-button.previous{
     visibility: hidden;

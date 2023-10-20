@@ -1,11 +1,12 @@
 .footer{
+  margin-top: 96px;
   max-width: 100%;
   min-height: 253px;
   border-radius: 32px 32px 0 0;
   background: #000;
 }
 .footer__inner {
-  margin: 32px 48px;
+  padding: 32px 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -71,18 +72,18 @@
 
 .footer__tik-tok {
   border-radius: 999px;
-  background: url('../images/footer_tit-tok.png'), lightgray 50% / contain no-repeat;
+  background: url('../images/footer_tit-tok.avif'), lightgray 50% / contain no-repeat;
   mix-blend-mode: lighten;
 }
 .footer__vk {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background: url('../images/footer_vk.png'), lightgray 50% / contain no-repeat;
+  background: url('../images/footer_vk.avif'), lightgray 50% / contain no-repeat;
 }
 .footer__telegram {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background: url('../images/footer_telegram.png'), lightgray 50% / contain no-repeat;
+  background: url('../images/footer_telegram.avif'), lightgray 50% / contain no-repeat;
 }
 
 .footer__logo {

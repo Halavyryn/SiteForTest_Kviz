@@ -13,22 +13,25 @@ input[type="checkbox" ]{
   display: none;
 }
 .kviz{
+  margin-top: 80px;
+  margin-bottom: 96px;
+  display: flex;
+  height: auto;
 
 }
 #kviz .container {
-  margin-top: 90px;
-  margin-bottom: 0x;
+  display: flex;
+ /* margin-top: 90px;*/
   position: relative;
   max-width: 1504px;
   width: 100%;
   min-height: 762px;
- /* background: #ffff99;*/
+
 }
 .kviz__inner{
   display: flex;
   gap: 8px;
 }
-
 
 .kviz__popups{
   display: flex;
@@ -45,10 +48,10 @@ div.no_select{
 }
 
 .kviz__popup, .kviz__popup2, .kviz__popup3{
-  align-self: flex-start;
   display: flex;
-  max-width: 320px;
+  align-self: flex-start;
   width: 100%;
+  max-width: 320px;
   min-height: 38px;
   padding: 10px 48px 10px 24px;
   flex-direction: column;
@@ -115,17 +118,20 @@ div.no_select{
   z-index: -2;
 }
 .kviz__content {
+  display: flex;
   position: relative;
-  max-width: 1112px;
   width: 100%;
+  max-width: 1112px;
   height: auto;
   border-radius: 32px;
-  background: #FFF;
+  background: #fff;
 }
 
 
 .kviz__box{
   margin: 48px 32px 32px 32px;
+  display: inline-block;
+  width: 100%;
 }
 
 .kviz__image-smiles{
@@ -139,8 +145,9 @@ div.no_select{
 }
 
 .kviz__title {
-  max-width: 1048px;
+  display: flex;
   width: 100%;
+  max-width: 1048px;
   color: #000;
   font-family: 'Neue Machina', sans-serif;
   font-size: 72px;
@@ -150,9 +157,10 @@ div.no_select{
 }
 
 .kviz__text {
+  display: flex;
   margin-top: 24px;
-  max-width: 700px;
   width: 100%;
+  max-width: 700px;
   color: #000;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -291,6 +299,7 @@ label{
   border-radius: 30px;
 }
 .popup, .popup2, .popup3, .popup4{
+
   width: 1504px;
 /*  height: 762px;*/
   height: auto;
@@ -453,11 +462,3 @@ input[type="text"] {
   outline: 0;
 }
 
-.page{
-  color: initial;
-  background: white;
-}
-div.gallery{
-  margin-top: 0;
-  margin-bottom: 100px;
-}

@@ -1,33 +1,24 @@
 /*ПОДКЛЮЧЕНИЕ GULP*/
-/*Переменная src берет исходные данные, dest помещает полученные для gulp*/
-/*watch следит за изменениями данных*/
-/*parallel выполняет параллельно обновления*/
-/* series выполняет последователоьно и попорядку обновления*/
 const{src, dest, watch, parallel, series} = require('gulp');
 
 
 /*ПОДКЛЮЧЕНИЕ ПЛАГИНОВ GULP*/
 
 /*HTML*/
-/*BROWSER-SYNC, для работы с html-файлами*/
+
 const browserSync = require('browser-sync').create();
-/*GULP INCLUDE, для объединения html-файлов*/
 const include = require('gulp-include')
 
 /*CSS*/
-/*GULP-SASS, для преобразования файлов из scss в .css*/
+
 const scss = require('gulp-sass')(require('sass'));
-/*GULP-CONCAT, для объединения файлов и переменования в один .css файл*/
 const concat = require('gulp-concat');
-/*GULP-AUTOPREFIXER, добавляет префиксы к свойствам в .css файлах*/
 const autoprefixer = require('gulp-autoprefixer');
 
 /*JAVASCRIPT*/
-/*GULP-UGLIFY-ES, для работы с JS-файлами*/
 const uglify = require('gulp-uglify-es').default;
 
 /*IMAGE*/
-/*Плагины для конвертации изображений*/
 const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
@@ -129,12 +120,11 @@ function building(){
         .pipe(dest('dist'))
 }
 
-/*Start version 2*/
-/*IMAGE*/
 
+/*IMAGE*/
 /*Функция для конвертации картинок*/
 function images(){
-    return src(['assets/images/src/*.*','!assets/images/src/*.svg'])
+    return src(['assets/images/src/**.*','!assets/images/src/*.svg'])
 
         /*Плагин кеш для проверки существуют ли картинки, чтобы не повторять конвертацию*/
         .pipe(newer('assets/images'))

@@ -6,7 +6,7 @@ let textRadio = '';
 
 /*FOR DELETE ALL VALUES*/
 function DeleteValues() {
-    location.reload();
+    window.location.href = '/';
 }
 
 
